@@ -1,5 +1,9 @@
 /* entrada_salida.c */
 #include <stdio.h>
+
+/* Esta constante es necesaria para strnlen en Minix */
+#define _MINIX
+
 #include <string.h>
 
 #define MAX_LEN 20
