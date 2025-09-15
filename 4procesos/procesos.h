@@ -3,9 +3,9 @@
 
 /* constantes */
 #define MAX_PROCESOS 4
-#define PREPARADO    0
-#define EJECUTANDO   1
-#define BLOQUEADO    2
+#define ESTADO_PREPARADO    0
+#define ESTADO_EJECUTANDO   1
+#define ESTADO_BLOQUEADO    2
 
 #define MAX_EJECUTABLE 50
 #define MEM_ERROR -1
