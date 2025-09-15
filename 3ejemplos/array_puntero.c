@@ -1,4 +1,4 @@
-/* arraypuntero.c */ 
+/* array_puntero.c */ 
 #include <stdio.h> 
 
 int main(int argc, char* argv[]) 
