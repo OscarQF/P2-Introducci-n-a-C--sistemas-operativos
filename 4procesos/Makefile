@@ -13,7 +13,7 @@ $(TARGET): # escribe aquí sus dependencias con los ficheros objetos
 
 
 # Deberás completar la regla "clean" para que borre el ejecutable y todos los ficheros
-# objetos generados.
+# objetos generados. Usa "rm -f" para que no dé error si el fichero no existe
 clean: # No tiene dependencias
 	# escribe aquí para borrar los ficheros objetos y el ejecutable
 
