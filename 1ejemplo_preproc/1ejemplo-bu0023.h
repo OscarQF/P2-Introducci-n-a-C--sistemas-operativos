@@ -1,1 +1,1 @@
-#define SIX 3 + 3
+#define SIX (3 + 3)

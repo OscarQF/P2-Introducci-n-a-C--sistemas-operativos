@@ -1,4 +1,5 @@
 #include "1ejemplo-bu0023.h"
+#include <stdio.h>
 
 int main(void)
 {
