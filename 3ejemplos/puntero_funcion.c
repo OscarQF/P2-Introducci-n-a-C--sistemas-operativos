@@ -10,14 +10,17 @@ static void ejecutar_pwd(const struct orden* orden);
 static void ejecutar_cd(const struct orden* orden);
 static void ejecutar_jobs(const struct orden* orden);
 static void ejecutar_orden_externa(const struct orden* orden);
+static void ejecutar_echo(const struct orden* orden);
+
 
 /* Array constante de punteros a funciones */
-#define NUM_FUNCIONES 4
+#define NUM_FUNCIONES 5
 static void (* const ejecutar[NUM_FUNCIONES])(const struct orden* orden) = {
     ejecutar_pwd,
     ejecutar_cd,
     ejecutar_jobs,
-    ejecutar_orden_externa
+    ejecutar_orden_externa,
+    ejecutar_echo
 };
 
 /* Implementaciones de las funciones. No son implementaciones reales,
@@ -38,6 +41,10 @@ static void ejecutar_orden_externa(const struct orden* orden) {
     printf("Ejecutando orden externa con argumento: %s\n", orden->argumento);
 }
 
+static void ejecutar_echo(const struct orden* orden) {
+    printf("Ejecutando echo con argumento: %s\n", orden->argumento);
+}
+
 /* Programa principal de demostración */
 int main(void) {
     struct orden actual;
@@ -47,6 +54,7 @@ int main(void) {
 
     /* Llamada a la función que está en la posición 2 -> ejecutar_jobs */
     ejecutar[2](&actual);
+    ejecutar[4](&actual);
 
     return 0;
 }
