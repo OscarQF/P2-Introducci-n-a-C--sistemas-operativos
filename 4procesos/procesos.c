@@ -73,9 +73,11 @@ void liberar_procesos(struct proceso* procesos[])
     /**** PRÁCTICA ****/
     /* Recorre el array de procesos con for liberando la memoria de cada
        proceso */
-   for(int i=0;i<MAX_PROCESOS;i++)
+   for(int i=0;i<MAX_PROCESOS;i++){
+      free(procesos[i]);
+      procesos[i]=null;
+   }
 
-   
 
 
 }
